@@ -1,9 +1,9 @@
-import * as functions from 'firebase-functions';
+import * as functions from "firebase-functions";
 
 export class FirebaseConfig {
-    static jwtSecret(): string {
-        return functions.config().jwt.secret
-    }
+  static jwtSecret(): string {
+    return functions.config().jwt.secret;
+  }
 }
 
 

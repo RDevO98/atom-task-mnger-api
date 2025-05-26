@@ -4,14 +4,18 @@ export interface UserProps {
 }
 
 export class User {
-    constructor(private props: UserProps) {
-        if (!props.email) throw new Error("Email is required");
-    }
+  constructor(private props: UserProps) {
+    if (!props.email) throw new Error("Email is required");
+  }
 
-    get id() { return this.props.id; }
-    get email() { return this.props.email; }
+  get id() {
+    return this.props.id;
+  }
+  get email() {
+    return this.props.email;
+  }
 
-    toJSON() {
-        return { ...this.props };
-    }
+  toJSON() {
+    return {...this.props};
+  }
 }
