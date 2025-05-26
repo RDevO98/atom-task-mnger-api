@@ -12,4 +12,4 @@ app.use(cors({
 app.use(express.json());
 app.use(routes);
 
-export const api = functions.https.onRequest(app);
+export const api = functions.https.onRequest({secrets: ["JWT_SECRET"]}, app);
